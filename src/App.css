@@ -80,7 +80,7 @@ nav {
   height: 10rem;
   background-size: cover;
   margin: auto;
-  justify-content: space-between;
+  justify-content: space-around;
   transition: all 0.3s ease-in-out;
 }
 

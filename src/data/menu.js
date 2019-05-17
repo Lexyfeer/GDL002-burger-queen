@@ -27,48 +27,48 @@ export const menuList = [
         "Name": "Hamburguesa simple",
         "Sabores": ["Res", "Pollo", "Vegetariana"],
         "Price": "$10",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056321/hamburgerSimple.png"
     },
     {
         "Name": "Hamburguesa doble",
         "Sabores": ["Res", "Pollo", "Vegetariana"],
         "Price": "$15",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056321/hamburgerDoble.png"
     },
     {
         "Name": "Papas fritas",
         "Sabores": null,
         "Price": "$5",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056321/frenchFries.png"
     },
     {
         "Name": "Aros de cebolla",
         "Sabores": null,
         "Price": "$5",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056321/onionCircle.png"
     },
     {
         "Name": "Agua 500ml",
         "Sabores": null,
         "Price": "$5",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056330/waterBotle.png"
     },
     {
         "Name": "Agua 750ml",
         "Sabores": null,
         "Price": "$7",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056625/bigWater.png"
     },
     {
-        "Name": "Gaseosa 500ml",
+        "Name": "Refresco 500ml",
         "Sabores": null,
         "Price": "$7",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056328/soda1.png"
     },
     {
-        "Name": "Gaseosa 750ml",
+        "Name": "Refresco 750ml",
         "Sabores": null,
         "Price": "$10",
-        "Image": ""
+        "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056328/soda.jpg"
     }
 ]
