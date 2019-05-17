@@ -66,45 +66,43 @@ nav {
   margin-bottom: 2rem;
 }
 
-.thumbNailContainer {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
-  width: 100%;
+.menuContainer {
+  margin: auto;
+  display: inline-block;
+  margin: 1rem;
+  padding: .5rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.LoginThumbNailContainer1,
-.LoginThumbNailContainer2,
-.LoginThumbNailContainer3,
-.LoginThumbNailContainer4 {
-  width: 25%;
-  height: 17rem;
-  background-repeat: no-repeat;
+.breakfastImage {
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  margin: auto;
+  justify-content: space-between;
   transition: all 0.3s ease-in-out;
 }
 
-.LoginThumbNailContainer1:hover,
-.LoginThumbNailContainer2:hover,
-.LoginThumbNailContainer3:hover,
-.LoginThumbNailContainer:hover {
+.breakfastImage:hover {
   transform: scale(1.05);
   border: .1rem solid red;
   background-color: rgb(228, 228, 228);
   cursor: pointer;
 }
 
-.LoginThumbNailContainer1 {
-  background-image: url(https://res.cloudinary.com/lexyfeer/image/upload/v1557961290/cafeAmericano.png);
+.LoginwaiterThumbNailContainer1 {
+  background-image: url();
 }
 
-.LoginThumbNailContainer2 {
-  background-image: url(https://res.cloudinary.com/lexyfeer/image/upload/v1557961290/cafeLeche.jpg);
+.LoginwaiterThumbNailContainer2 {
+  background-image: url();
 }
 
-.LoginThumbNailContainer3 {
-  background-image: url(https://res.cloudinary.com/lexyfeer/image/upload/v1557961985/jugo.png);
+.LoginwaiterThumbNailContainer3 {
+  background-image: url();
 }
 
-.LoginThumbNailContainer4 {
-  background-image: url(https://res.cloudinary.com/lexyfeer/image/upload/v1557961290/sandwich.png);
+.LoginwaiterThumbNailContainer4 {
+  background-image: url();
 }
