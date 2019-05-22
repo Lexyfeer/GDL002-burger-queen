@@ -3,7 +3,7 @@ import firebase from '../firebase/firebase';
 
 // import { Link } from 'react-router-dom';
 
-class MenulistbreakfastDB extends Component {
+class MenulistlunchDB extends Component {
     constructor() {
         super()
         this.state = {
@@ -12,20 +12,20 @@ class MenulistbreakfastDB extends Component {
         };
     };
     componentDidMount() {
-        const breakfastRef = firebase.database().ref('menubreakfast');
-        breakfastRef.on('value', (snapshot) => {
-            let menubreakfast1 = snapshot.val();
-            let newStatemenubreakfast = [];
-            for (let menubreaksfast2 in menubreakfast1) {
-                newStatemenubreakfast.push({
-                    Name: menubreakfast1[menubreaksfast2].Name,
-                    Sabores: menubreakfast1[menubreaksfast2].Sabores,
-                    Price: menubreakfast1[menubreaksfast2].Price,
-                    Image: menubreakfast1[menubreaksfast2].Image
+        const lunchRef = firebase.database().ref('menulunch');
+        lunchRef.on('value', (snapshot) => {
+            let menulunch1 = snapshot.val();
+            let newStatemenulunch = [];
+            for (let menulunch2 in menulunch1) {
+                newStatemenulunch.push({
+                    Name: menulunch1[menulunch2].Name,
+                    Sabores: menulunch1[menulunch2].Sabores,
+                    Price: menulunch1[menulunch2].Price,
+                    Image: menulunch1[menulunch2].Image
                 });
             }
             this.setState({
-                menubreaksfast: newStatemenubreakfast
+                menulunch: newStatemenulunch
             });
         });
     }
@@ -39,14 +39,14 @@ class MenulistbreakfastDB extends Component {
                         <h2>¿Qué deseas ordenar?</h2>
                     </div>
                 </div>
-                <div>{this.state.menubreaksfast.map((breakfast, i) =>
+                <div>{this.state.menulunch.map((lunch, i) =>
 
                     <div key={i} className='menuContainer'>
 
-                        <div className='breakfastImage' style={{ backgroundImage: "url(" + breakfast.Image + ")" }}></div>
+                        <div className='lunchImage' style={{ backgroundImage: "url(" + lunch.Image + ")" }}></div>
 
-                        <h3>{breakfast.Name}</h3>
-                        <h3>{breakfast.Price}</h3>
+                        <h3>{lunch.Name}</h3>
+                        <h3>{lunch.Price}</h3>
                     </div>
 
                 )}
@@ -56,7 +56,7 @@ class MenulistbreakfastDB extends Component {
     }
 }
 
-export default MenulistbreakfastDB;
+export default MenulistlunchDB;
 
 
 

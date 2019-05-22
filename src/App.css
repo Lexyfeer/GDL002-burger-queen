@@ -75,7 +75,8 @@ nav {
   text-align: center;
 }
 
-.breakfastImage {
+.breakfastImage,
+.lunchImage {
   width: 10rem;
   height: 10rem;
   background-size: cover;
@@ -84,7 +85,8 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.breakfastImage:hover {
+.breakfastImage:hover,
+.lunchImage:hover {
   transform: scale(1.05);
   border: .1rem solid red;
   background-color: rgb(228, 228, 228);
