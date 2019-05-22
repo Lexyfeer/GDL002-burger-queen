@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import Login from './components/login';
 import Register from './components/register';
-import Loginwaiter from './components/loginwaiter';
+import Menulistbreakfast from './components/breakfast';
 import Orderslist from './components/orderslist';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/" render={ () => <Login title="BurgerQueen" />} />
         {/* <Home title="BurgerQueen" /> */}
         <Route path="/register" component={Register} />
-        <Route path="/loginwaiter" component={Loginwaiter} />
+        <Route path="/breakfast" component={Menulistbreakfast} />
         <Route path="/orderslist" component={Orderslist} />
       </div>
     </BrowserRouter>
