@@ -54,6 +54,10 @@ nav {
   margin-bottom: 3rem;
 }
 
+.container2 {
+  margin-bottom: 2rem;
+}
+
 .mainContent {
   width: 90%;
   margin: auto;
@@ -69,7 +73,7 @@ nav {
 .menuContainer {
   margin: auto;
   display: inline-block;
-  margin: 1rem;
+  margin: 3rem;
   padding: .5rem;
   flex-wrap: wrap;
   text-align: center;
@@ -90,5 +94,38 @@ nav {
   transform: scale(1.05);
   border: .1rem solid red;
   background-color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+
+.list-group-item {
+  width: 20rem;
+  height: 3rem;
+  justify-content: flex-start;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  transform: scale(1.03);
+  border: .1rem solid blue;
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+
+.form {
+  background-color: rgba(128, 128, 128, 0.281);
+  display: inline-table;
+  color: black;
+  text-align: center;
+}
+
+.btn {
+  background-color: #41F252;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  border: .1rem solid black;
+  background-color: rgb(13, 201, 248);
   cursor: pointer;
 }

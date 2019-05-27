@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/firebase';
+import Orderlist from './orderslist'
 
 // import { Link } from 'react-router-dom';
 
@@ -8,8 +9,12 @@ class MenulistlunchDB extends Component {
         super()
         this.state = {
             menubreaksfast: [],
-            menulunch: []
+            menulunch: [],
+            orders: [],
+            total: []
         };
+        this.submit = this.submit.bind(this);
+        this.sumOrder = this.sumOrder.bind(this);
     };
     componentDidMount() {
         const lunchRef = firebase.database().ref('menulunch');
@@ -29,47 +34,59 @@ class MenulistlunchDB extends Component {
             });
         });
     }
+    submit(item, price) {
+        const order = {
+            item: item,
+            price: price
+        }
+        this.setState({
+            orders: [...this.state.orders, order]
+        })
+    };
+    sumOrder () {
+        const priceArr = this.state.orders.map((el) => el.price)
+        const items = priceArr.reduce((sum, result) => {
+            return sum + result;
+        });
+        this.setState({
+            total: items
+        });
+    }
     render() {
 
         return (
-            <div>
+            <div className="container1">
                 <div className='mainContent'>
                     <div className='container'>
                         <h3>Iniciaste sesion como: meserx</h3>
                         <h2>¿Qué deseas ordenar?</h2>
                     </div>
                 </div>
-                <div>{this.state.menulunch.map((lunch, i) =>
-
+                <div className="container2" >{this.state.menulunch.map((lunch, i) =>
                     <div key={i} className='menuContainer'>
+                        <button className='lunchImage' onClick={() => {
+                            this.submit(lunch.Name, lunch.Price);
+                        }} type="submit">
+                            <div className='lunchImage' style={{ backgroundImage: "url(" + lunch.Image + ")" }}>
+                            </div>
+                            <div>
+                            <h5>{lunch.Name}</h5>
+                            <h5>{lunch.Price}</h5>
+                            </div>
+                                      
+                        </button>
 
-                        <div className='lunchImage' style={{ backgroundImage: "url(" + lunch.Image + ")" }}></div>
-
-                        <h3>{lunch.Name}</h3>
-                        <h3>{lunch.Price}</h3>
                     </div>
 
                 )}
                 </div>
+                <Orderlist menuList={this.state.orders} />
+                <button onClick={this.sumOrder}>
+                    <h4>Total ${this.state.total}</h4>
+                </button>
             </div>
         )
     }
 }
 
 export default MenulistlunchDB;
-
-
-
-    // return (
-    //     <div className='mainContent'>
-    //         <div className='container'>
-    //             {/* <h2>{props.title}</h2> */}
-    //             <h3>Iniciaste sesion como: meserx</h3>
-    //             <h2>¿Qué deseas ordenar?</h2>
-    //             <Link className="button" to="/menubreaksfast">DESAYUNO</Link>
-    //             <Link className="button" to="/menulunch">COMIDA</Link>
-
-    //             {menuBreakfast}
-    //         </div>
-    //     </div>
-    // )

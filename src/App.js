@@ -8,6 +8,7 @@ import MenulistbreakfastDB from './components/breakfast';
 import MenulistlunchDB from './components/lunch';
 import Orderslist from './components/orderslist';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,8 @@ function App() {
         <Route path="/breakfast" component={MenulistbreakfastDB} />
         <Route path="/lunch" component={MenulistlunchDB} />
         <Route path="/orderslist" component={Orderslist} />
+      </div>
+      <div>
       </div>
     </BrowserRouter>
 

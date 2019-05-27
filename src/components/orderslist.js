@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Orderslist = (props) => (
-    <div className="mainContent">
-        <div className="container">
-            <h2>{props.title}</h2>
-            <h3>Meserx-Lista de Pedidos</h3>
-            <div className="OrderslistImage"></div>
-            <div className="thumbNailContainer">
-                <div className="OrderslistThumbNailContainer1"></div>
-                <div className="OrderslistThumbNailContainer2"></div>
-                <div className="OrderslistThumbNailContainer3"></div>
-                <div className="OrderslistThumbNailContainer4"></div>
-            </div>
+export class Orderlist extends Component{
+    render(){
+        const order = this.props.menuList.map((menu, i) => {
+            return(
+                <div>
+                    
+                    <ul key={i} className="list-group">
+                        <li className="list-group-item d-flex justify-content-between align-items-center">
+                            <p>{menu.item}</p>
+                            <span>{"$" + menu.price}</span>
+                        </li>
+                    </ul>
+                </div>
+            )
+        })
+        return(
+            order
+        )
+    }
+}
 
-        </div>
-    </div>
-);
-
-
-export default Orderslist;
+export default Orderlist;
