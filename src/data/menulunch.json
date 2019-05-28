@@ -6,7 +6,7 @@
         "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056321/hamburgerSimple.png"
     },
     {
-        "Name": "Hamburguesa doble",
+        "Name": "Hamburguesa doble Dragon",
         "Sabores": ["Res", "Pollo", "Vegetariana"],
         "Price": 15,
         "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1558056321/hamburgerDoble.png"

@@ -18,7 +18,7 @@
         "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1557961290/sandwich.png"
     },
     {
-        "Name": "Jugo de frutas natural",
+        "Name": "Jugo capa dorada",
         "Sabores" : ["Naranja", "Zanahoria"],
         "Price": 7,
         "Image": "https://res.cloudinary.com/lexyfeer/image/upload/v1557961985/jugo.png"

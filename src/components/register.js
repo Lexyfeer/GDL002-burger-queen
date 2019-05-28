@@ -14,11 +14,11 @@ const Register = (props) => (
                         <br /><br />
                         <label for="cargo">Cargo: *</label>
                         <br />
-                        <select className="form-control">
+                        <selec className="form-control">
                             <option value="Meserx">Meserx</option>
                             <option value="Cocinerx">Cocinerx</option>
 
-                        </select>
+                        </selec>
                         <br /><br />
                         <label for="email">Email: *</label>
                         <br />
