@@ -6,7 +6,7 @@ import Login from './components/login';
 import Register from './components/register';
 import MenulistbreakfastDB from './components/breakfast';
 import MenulistlunchDB from './components/lunch';
-import Orderslist from './components/orderslist';
+import Orderskitchen from './components/orderstokitchen';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/breakfast" component={MenulistbreakfastDB} />
         <Route path="/lunch" component={MenulistlunchDB} />
-        <Route path="/orderslist" component={Orderslist} />
+        <Route path="/Orderstokitchen" component={Orderskitchen} />
       </div>
       <div>
       </div>

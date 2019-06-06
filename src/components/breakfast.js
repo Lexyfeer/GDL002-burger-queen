@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/firebase';
 import Orderlist from './orderslist'
+import Btnorderkitchen from './btnsendmenu'
 
 // import { Link } from 'react-router-dom';
 
@@ -84,6 +85,7 @@ class MenulistbreakfastDB extends Component {
                 <button onClick={this.sumOrder}>
                     <h4>Total ${this.state.total}</h4>
                 </button>
+                <Btnorderkitchen order={this.state.orders} />
             </div>
         )
     }

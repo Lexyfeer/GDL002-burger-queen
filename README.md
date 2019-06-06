@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Burger Queen
+## 1. Preámbulo
 
-## Available Scripts
+[React](https://reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
+son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
+En el contexto del navegador, [_mantener la interfaz sincronizada con el estado es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
+Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una serie de convenciones e implementaciones _probadas_ y _documentadas_ para resolver un problema común a toda interfaz web. Esto nos permite concentrarnos mejor (dedicar más tiempo) en las caractrísticas _específicas_ de nuestra aplicación.
 
-In the project directory, you can run:
+Cuando elegimos una de estas tecnologías no solo importamos un pedacito de código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
+**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas **abstracciones**, un **vocabulario**, una **comunidad**, etc...
 
-### `npm start`
+Como desarrolladora Front-end, estos kits de desarrollo pueden resultar de gran ayuda para implementar rápidamente características de los proyectos en los que trabajes.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 2. Definición del producto
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Esta vez tenemos un proyecto 100% por encargo, un pequeño restaurante de hamburguesas, que está creciendo, necesita una
+interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
-### `npm test`
+![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Posteriormente nos dimos a la tarea de definir ¿Quiénes serían nuestros principales usuarios?, pensar en ¿Cuál sería el objetivo de nuestros usuarios al usar nuestra página?  y por último con base a las necesidades de los usuarios pensar en ¿Qué datos incluiría nuestra aplicación web?
+Quedando de la siguiente forma:
 
-### `npm run build`
+#### ¿Quiénes son los principales usuarios de producto?
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Esta es la información que tenemos del cliente:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+> Somos **Burger Queen**, una cadena de comida 24hrs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Nuestra propuesta de servicio 24hrs ha sido muy bien recibido y, para seguir creciendo, necesitamos un sistema que nos ayude a tomar los pedidos de nuestros clientes.
 
-### `npm run eject`
+> Tenemos 2 menús: uno muy sencillo para el desayuno:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> | Ítem                      |Precio $|
+> |---------------------------|------|
+> | Café americano            |    5 |
+> | Café con leche            |    7 |
+> | Sándwich de jamón y queso |   10 |
+> | Jugo de frutas natural              |    7 |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Y otro menú para el resto del día:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> | Ítem                      |Precio|
+> |---------------------------|------|
+> |**Hamburguesas**           |   **$**   |
+> |Hamburguesa simple         |    10|
+> |Hamburguesa doble          |    15|
+> |**Acompañamientos**        |   **$**   |
+> |Papas fritas               |     5|
+> |Aros de cebolla            |     5|
+> |**Para tomar**             |   **$**   |
+> |Agua 500ml                 |     5|
+> |Agua 750ml                 |     7|
+> |Bebida/gaseosa 500ml       |     7|
+> |Bebida/gaseosa 750ml       |     10|
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> **Importante:** Los clientes pueden escoger entre hamburguesas de res, de pollo, o vegetariana. Además, por $1 adicional, pueden agregarle queso o huevo.
+>
+> Nuestros clientes son bastante indecisos, por lo que es muy común que cambien su pedido varias veces antes de finalizarlo.
 
-## Learn More
+La interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_ agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el costo total.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-### Code Splitting
+* Principalmente optimizar los tiempos de la persona que se encarga de tomar los pedidos.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Evitar lo mas que se pueda cometer errores a la hora de tomar los pedidos.

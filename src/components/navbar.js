@@ -9,7 +9,7 @@ const NavBar = () => (
             <li><NavLink className="navMenuLink" to="/register" >LogOut</NavLink></li>
             <li><NavLink className="navMenuLink" to="/breakfast" >Desayuno</NavLink></li>
             <li><NavLink className="navMenuLink" to="/lunch" >Comida</NavLink></li>
-            <li><NavLink className="navMenuLink" to="/orderslist" >Orders list</NavLink></li>
+            <li><NavLink className="navMenuLink" to="/orderstokitchen" >Pedidos</NavLink></li>
         </ul>
     </nav>
 );
